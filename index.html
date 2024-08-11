@@ -1,34 +1,62 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSGarnet</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
-
+    <title>Главная страница</title>
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            background-image: url('garnet.png');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 7vh;
-            margin: 0;
-            background-color: lightblue;
-            font-family: 'Gabriela';
-            font-size: 2em;
+            text-align: center;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #830f0d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #6a0c0b;
         }
     </style>
-    <script>
-        async function loadHeader() {
-            const response = await fetch('header.html');
-            const headerContent = await response.text();
-            document.body.insertAdjacentHTML('afterbegin', headerContent);
-        }
-        window.addEventListener('load', loadHeader);
-    </script>
 </head>
-        <h>Шрифт чекап. Font checkup.</h> <br />
-        <h2>Шрифт чекап. Font checkup.</h2> <br />
-        <h3>Шрифт чекап. Font checkup.</h3>
-</body> 
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>Я ещё думаю над креативной надписью...</h1>
+            <div class="buttons">
+                <a href="registration.html" class="button">Регистрация</a>
+                <a href="login.html" class="button">Вход</a>
+            </div>
+        </div>
+    </div>
+    <!-- Подключение header.html -->
+    <iframe src="header.html" frameborder="0" width="100%" height="50px"></iframe>
+    <!-- Подключение footer.html -->
+    <iframe src="footer.html" frameborder="0" width="100%" height="50px"></iframe>
+</body>
 </html>
