@@ -16,8 +16,16 @@
             font-size: 2em;
         }
     </style>
+    <script>
+        async function loadHeader() {
+            const response = await fetch('header.html');
+            const headerContent = await response.text();
+            document.body.insertAdjacentHTML('afterbegin', headerContent);
+        }
+        window.addEventListener('load', loadHeader);
+    </script>
 </head>
-<body>
-    <div>WIP :P</div>
+        <h2>This is Work-In-Progress!</h2>
+        <p>But i'm working hard. :3</p>
 </body>
 </html>
