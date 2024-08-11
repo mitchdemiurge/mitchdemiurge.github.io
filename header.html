@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>header</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marck Script&display=swap" rel="stylesheet">
     <style>
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: flex;
+            background-color: #830f0d69;
+        }
+        .logo {
+            text-align: left;
+            padding: 5px;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Marck Script';
+            color: #990000;
+            flex-grow: 1;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>wippest wip on the whole world</h1>
+        <div class="logo">MSGarnet</div>
+        <a href="registration.html" id="icon-link">
+            <img src="C:\Users\mitchell\Desktop\GoStuff\MSGarnet\mitchdemiurge.github.io\log_icon.png" alt="Registration Icon" class="icon" id="icon">
+        </a>
     </header>
+
+    <script>
+        // Проверка, осуществлена ли регистрация
+        var isRegistered = /* Здесь должен быть код для проверки регистрации */;
+
+        // Изменение иконки и ссылки в зависимости от статуса регистрации
+        var iconLink = document.getElementById('icon-link');
+        var icon = document.getElementById('icon');
+
+        if (isRegistered) {
+            iconLink.href = "settings.html";
+            icon.src = "C:\Users\mitchell\Desktop\GoStuff\MSGarnet\mitchdemiurge.github.io\set_icon.png";
+            icon.alt = "Settings Icon";
+        }
+    </script>
 </body>
 </html>
